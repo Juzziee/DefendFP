@@ -2,10 +2,9 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Players\Loot.cs">
     <Files>
-      <File FileName="Assets\Scripts\Players\inventoryGUI.cs" Line="7" Column="16" />
+      <File FileName="Assets\Scripts\Players\inventoryGUI.cs" Line="70" Column="11" />
       <File FileName="Assets\Scripts\Items\ItemClass.cs" Line="22" Column="2" />
-      <File FileName="Assets\Scripts\Players\Control.cs" Line="51" Column="1" />
-      <File FileName="Assets\Scripts\Players\Loot.cs" Line="44" Column="108" />
+      <File FileName="Assets\Scripts\Players\Loot.cs" Line="130" Column="67" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
