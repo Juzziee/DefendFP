@@ -48,6 +48,7 @@
      <Compile Include="Assets\Scripts\Environment\Tree.cs" />
      <Compile Include="Assets\Scripts\Environment\Tree_Fall.cs" />
      <Compile Include="Assets\Scripts\Items\ItemClass.cs" />
+     <Compile Include="Assets\Scripts\Players\ActionBar.cs" />
      <Compile Include="Assets\Scripts\Players\Control.cs" />
      <Compile Include="Assets\Scripts\Players\Loot.cs" />
      <Compile Include="Assets\Scripts\Players\inventoryGUI.cs" />
