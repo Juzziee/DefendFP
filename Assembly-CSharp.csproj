@@ -49,8 +49,10 @@
      <Compile Include="Assets\Scripts\Environment\Tree_Fall.cs" />
      <Compile Include="Assets\Scripts\Items\ItemClass.cs" />
      <Compile Include="Assets\Scripts\Players\ActionBar.cs" />
+     <Compile Include="Assets\Scripts\Players\ActionBar_old.cs" />
      <Compile Include="Assets\Scripts\Players\Control.cs" />
      <Compile Include="Assets\Scripts\Players\Loot.cs" />
+     <Compile Include="Assets\Scripts\Players\SkillSlot.cs" />
      <Compile Include="Assets\Scripts\Players\inventoryGUI.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />

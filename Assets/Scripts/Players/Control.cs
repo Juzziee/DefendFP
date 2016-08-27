@@ -46,7 +46,6 @@ public class Control : MonoBehaviour {
 		if (Input.GetButtonDown ("Inventory")) {
 			// Hide inventory
 			if (inventoryGUI.inventoryWindowToggle == true) {
-				Debug.Log ("Window is true, disabling inv");
 				inventoryGUI.inventoryWindowToggle = false;
 				cursorMode = CursorLockMode.Locked;
 				Cursor.visible = false;
@@ -54,7 +53,6 @@ public class Control : MonoBehaviour {
 
 			} else {
 				// Show Inventory
-				Debug.Log ("Window is false, toggling inv");
 				inventoryGUI.inventoryWindowToggle = true;
 				Cursor.visible = true;
 				cursorMode = CursorLockMode.None;

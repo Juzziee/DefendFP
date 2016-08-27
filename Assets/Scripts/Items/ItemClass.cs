@@ -9,9 +9,9 @@ public class ItemClass : MonoBehaviour {
 	static public Texture2D logIcon;
 
 	// Items
-	public ItemCreatorClass swordItem = new ItemCreatorClass (0, "Sword", swordIcon, "This is a sword");
-	public ItemCreatorClass axeItem = new ItemCreatorClass (1, "Simple Axe", axeIcon, "A simple axe for cutting trees");
-	public ItemCreatorClass logItem = new ItemCreatorClass (2, "Wooden Log", logIcon, "The remains of a slain tree");
+	public ItemCreatorClass swordItem = new ItemCreatorClass (0, "Sword", swordIcon, "This is a sword", true);
+	public ItemCreatorClass axeItem = new ItemCreatorClass (1, "Simple Axe", axeIcon, "A simple axe for cutting trees", true);
+	public ItemCreatorClass logItem = new ItemCreatorClass (2, "Wooden Log", logIcon, "The remains of a slain tree", false);
 
 
 
@@ -30,12 +30,14 @@ public class ItemClass : MonoBehaviour {
 		public string name;
 		public Texture2D icon;
 		public string description;
+		public bool equipable;
 
-		public ItemCreatorClass(int ide, string nam, Texture2D ico, string desc){
+		public ItemCreatorClass(int ide, string nam, Texture2D ico, string desc, bool eqp){
 			id = ide;
 			name = nam;
 			icon = ico;
 			description = desc;
+			equipable = eqp;
 		}
 
 	}

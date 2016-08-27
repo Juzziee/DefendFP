@@ -8,6 +8,7 @@ public class Loot : MonoBehaviour {
 
 	private bool inventoryWindowToggle = false;
 	private Rect inventoryWindow = new Rect (300, 100, 400, 400);
+	private int invCount = 0;
 
 
 	// Dictionary class
@@ -47,6 +48,14 @@ public class Loot : MonoBehaviour {
 		lootDictionaryAmounts [0] = 10;
 	lootDictionary [1] = itemObject.logItem.name;
 		lootDictionaryAmounts [1] = 10;
+	lootDictionary [2] = itemObject.swordItem.name;
+		lootDictionaryAmounts [2] = 2;
+	lootDictionary [3] = itemObject.logItem.name;
+		lootDictionaryAmounts [3] = 2;
+	lootDictionary [4] = itemObject.swordItem.name;
+		lootDictionaryAmounts [4] = 3;
+	lootDictionary [5] = itemObject.logItem.name;
+		lootDictionaryAmounts [5] = 10;
 	
 	}
 	
@@ -67,9 +76,16 @@ public class Loot : MonoBehaviour {
 		// Item 1
 		if (GUILayout.Button (lootDictionary [0], GUILayout.Height (50))) {
 			if(lootDictionary[0] != string.Empty && lootDictionaryAmounts[0] != 0){
-				inventoryGUI.inventoryNameDictionary [0] = lootDictionary [0];
+				while (inventoryGUI.inventoryNameDictionary [invCount] != string.Empty) {
+					if(lootDictionary[0] == inventoryGUI.inventoryNameDictionary[invCount]) {
+						break;
+					}
+					invCount++;
+				}
+				inventoryGUI.inventoryNameDictionary [invCount] = lootDictionary [0];
 				lootDictionaryAmounts [0] -= 1;
-				inventoryGUI.dictionaryAmounts [0] += 1;
+				inventoryGUI.dictionaryAmounts [invCount] += 1;
+				invCount = 0;
 			}
 			if (lootDictionaryAmounts [0] == 0) {
 				lootDictionary [0] = string.Empty;
@@ -80,9 +96,16 @@ public class Loot : MonoBehaviour {
 		// Item 2
 		if (GUILayout.Button (lootDictionary [1], GUILayout.Height (50))) {
 			if(lootDictionary[1] != string.Empty && lootDictionaryAmounts[1] != 0){
-				inventoryGUI.inventoryNameDictionary [1] = lootDictionary [1];
+				while (inventoryGUI.inventoryNameDictionary [invCount] != string.Empty) {
+					if(lootDictionary[1] == inventoryGUI.inventoryNameDictionary[invCount]) {
+						break;
+					}
+					invCount++;
+				}
+				inventoryGUI.inventoryNameDictionary [invCount] = lootDictionary [1];
 				lootDictionaryAmounts [1] -= 1;
-				inventoryGUI.dictionaryAmounts [1] += 1;
+				inventoryGUI.dictionaryAmounts [invCount] += 1;
+				invCount = 0;
 			}
 			if (lootDictionaryAmounts [1] == 0) {
 				lootDictionary [1] = string.Empty;
@@ -95,10 +118,17 @@ public class Loot : MonoBehaviour {
 		GUILayout.BeginHorizontal ();
 		// Item 3
 		if (GUILayout.Button (lootDictionary [2], GUILayout.Height (50))) {
-			if(lootDictionary[2] != string.Empty && lootDictionaryAmounts[3] != 0){
-				inventoryGUI.inventoryNameDictionary [2] = lootDictionary [2];
+			if(lootDictionary [2] != string.Empty && lootDictionaryAmounts [2] != 0){
+				while (inventoryGUI.inventoryNameDictionary [invCount] != string.Empty) {
+					if(lootDictionary [2] == inventoryGUI.inventoryNameDictionary[invCount]) {
+						break;
+					}
+					invCount++;
+				}
+				inventoryGUI.inventoryNameDictionary [invCount] = lootDictionary [2];
 				lootDictionaryAmounts [2] -= 1;
-				inventoryGUI.dictionaryAmounts [2] += 1;
+				inventoryGUI.dictionaryAmounts [invCount] += 1;
+				invCount = 0;
 			}
 			if (lootDictionaryAmounts [2] == 0) {
 				lootDictionary [2] = string.Empty;
@@ -108,10 +138,17 @@ public class Loot : MonoBehaviour {
 
 		// Item 4
 		if (GUILayout.Button (lootDictionary [3], GUILayout.Height (50))) {
-			if(lootDictionary[3] != string.Empty && lootDictionaryAmounts[3] != 0){
-				inventoryGUI.inventoryNameDictionary [3] = lootDictionary [3];
+			if(lootDictionary [3] != string.Empty && lootDictionaryAmounts [3] != 0){
+				while (inventoryGUI.inventoryNameDictionary [invCount] != string.Empty) {
+					if(lootDictionary [3] == inventoryGUI.inventoryNameDictionary[invCount]) {
+						break;
+					}
+					invCount++;
+				}
+				inventoryGUI.inventoryNameDictionary [invCount] = lootDictionary [3];
 				lootDictionaryAmounts [3] -= 1;
-				inventoryGUI.dictionaryAmounts [3] += 1;
+				inventoryGUI.dictionaryAmounts [invCount] += 1;
+				invCount = 0;
 			}
 			if (lootDictionaryAmounts [3] == 0) {
 				lootDictionary [3] = string.Empty;
@@ -119,17 +156,22 @@ public class Loot : MonoBehaviour {
 		}
 		GUILayout.Box (lootDictionaryAmounts [3].ToString (), GUILayout.Height (50));
 
-
-		GUILayout.EndHorizontal ();
-
-		GUILayout.BeginHorizontal ();
+		GUILayout.EndHorizontal();
+		GUILayout.BeginHorizontal();
 
 		// Item 5
 		if (GUILayout.Button (lootDictionary [4], GUILayout.Height (50))) {
-			if(lootDictionary[4] != string.Empty && lootDictionaryAmounts[4] != 0){
-				inventoryGUI.inventoryNameDictionary [4] = lootDictionary [4];
+			if(lootDictionary [4] != string.Empty && lootDictionaryAmounts [4] != 0){
+				while (inventoryGUI.inventoryNameDictionary [invCount] != string.Empty) {
+					if(lootDictionary [4] == inventoryGUI.inventoryNameDictionary[invCount]) {
+						break;
+					}
+					invCount++;
+				}
+				inventoryGUI.inventoryNameDictionary [invCount] = lootDictionary [4];
 				lootDictionaryAmounts [4] -= 1;
-				inventoryGUI.dictionaryAmounts [4] += 1;
+				inventoryGUI.dictionaryAmounts [invCount] += 1;
+				invCount = 0;
 			}
 			if (lootDictionaryAmounts [4] == 0) {
 				lootDictionary [4] = string.Empty;
@@ -139,10 +181,17 @@ public class Loot : MonoBehaviour {
 
 		// Item 6
 		if (GUILayout.Button (lootDictionary [5], GUILayout.Height (50))) {
-			if(lootDictionary[5] != string.Empty && lootDictionaryAmounts[5] != 0){
-				inventoryGUI.inventoryNameDictionary [5] = lootDictionary [5];
+			if(lootDictionary [5] != string.Empty && lootDictionaryAmounts [5] != 0){
+				while (inventoryGUI.inventoryNameDictionary [invCount] != string.Empty) {
+					if(lootDictionary [5] == inventoryGUI.inventoryNameDictionary[invCount]) {
+						break;
+					}
+					invCount++;
+				}
+				inventoryGUI.inventoryNameDictionary [invCount] = lootDictionary [5];
 				lootDictionaryAmounts [5] -= 1;
-				inventoryGUI.dictionaryAmounts [5] += 1;
+				inventoryGUI.dictionaryAmounts [invCount] += 1;
+				invCount = 0;
 			}
 			if (lootDictionaryAmounts [5] == 0) {
 				lootDictionary [5] = string.Empty;
