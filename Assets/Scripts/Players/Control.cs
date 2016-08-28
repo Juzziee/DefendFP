@@ -32,7 +32,8 @@ public class Control : MonoBehaviour {
 
 				RaycastHit hit;
 				if (Physics.Raycast (transform.position, transform.forward, out hit, 1.5f, -1)) {
-					hit.collider.gameObject.SendMessage ("Damage", 2.0);
+					hit.collider.gameObject.SendMessage ("hit");
+
 				}
 
 				StartCoroutine (Swing ());

@@ -17,7 +17,7 @@ public class ItemClass : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		swordIcon = Resources.Load ("Icons/sword") as Texture2D;
 	}
 	
 	// Update is called once per frame

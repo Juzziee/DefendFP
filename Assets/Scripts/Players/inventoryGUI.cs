@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class inventoryGUI : MonoBehaviour {
 
 	public static bool inventoryWindowToggle = false;
-	private Rect inventoryWindow = new Rect (Screen.width / 100 * 80, 100, 400, 400);
+	private Rect inventoryWindow = new Rect (Screen.width / 100 * 75, Screen.height / 100 * 15, Screen.width / 100 * 25, Screen.height / 100 * 30);
 
 	private Texture2D invButton;
 
@@ -50,10 +50,10 @@ public class inventoryGUI : MonoBehaviour {
 
 		// Row 1
 		GUILayout.BeginHorizontal ();
-		GUILayout.Button (inventoryNameDictionary[0], GUILayout.Height (50));
+		GUILayout.Button (inventoryNameDictionary[0], GUILayout.Height (50), GUILayout.Width(150));
 		GUILayout.Box (dictionaryAmounts [0].ToString (), GUILayout.Height (50));
-
-		GUILayout.Button (inventoryNameDictionary[1], GUILayout.Height (50));
+	
+		GUILayout.Button (inventoryNameDictionary[1], GUILayout.Height (50), GUILayout.Width(150));
 		GUILayout.Box (dictionaryAmounts [1].ToString (), GUILayout.Height (50));
 		GUILayout.EndHorizontal();
 
