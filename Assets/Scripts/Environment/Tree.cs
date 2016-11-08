@@ -7,13 +7,14 @@ public class Tree : MonoBehaviour {
 	public Rigidbody rb;
 
 	public Looting loot;
-
+	ItemClass itemObject = new ItemClass ();
 
 	// Use this for initialization
 	void Start () {
 		Health = 10;
 		rb = GetComponent<Rigidbody> ();
-		loot = GameObject.Find ("Inventory Controller").GetComponent<Looting> ();
+		loot = GameObject.FindObjectOfType(typeof(Looting)) as Looting;
+
 	}
 	
 	// Update is called once per frame
@@ -23,6 +24,7 @@ public class Tree : MonoBehaviour {
 			rb.AddRelativeForce (Vector3.forward * 75f);
 			//treeDestory ();
 		}
+
 	}
 
 	void treeDestory(){
@@ -39,7 +41,7 @@ public class Tree : MonoBehaviour {
 
 	void Damage(float damage){
 		Health -= damage;
-		loot.addInv ();
+		loot.addInv(itemObject.logItem.name, 10);
 
 	}
 		
