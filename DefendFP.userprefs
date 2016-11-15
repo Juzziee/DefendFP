@@ -2,11 +2,11 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Players\Looting.cs">
     <Files>
+      <File FileName="Assets\Scripts\Environment\Tree.cs" Line="26" Column="62" />
       <File FileName="Assets\Scripts\Players\Looting.cs" Line="21" Column="1" />
-      <File FileName="Assets\Scripts\Items\ItemClass.cs" Line="14" Column="72" />
-      <File FileName="Assets\Scripts\Players\CorpseLoot.cs" Line="87" Column="5" />
-      <File FileName="Assets\Scripts\Players\Control.cs" Line="35" Column="48" />
-      <File FileName="Assets\Scripts\Environment\Tree.cs" Line="41" Column="2" />
+      <File FileName="Assets\Scripts\Items\ItemClass.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Players\CorpseLoot.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Players\Control.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

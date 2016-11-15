@@ -5,6 +5,9 @@ public class Tree : MonoBehaviour {
 
 	public float Health;
 	public Rigidbody rb;
+	public Vector3 playerPOS;
+	public int despawnTime = 5;
+
 
 	public Looting loot;
 	ItemClass itemObject = new ItemClass ();
@@ -18,17 +21,15 @@ public class Tree : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if (Health <= 0) {
+			playerPOS = GameObject.Find ("Player").transform.position;
 			rb.isKinematic = false;
-			rb.AddRelativeForce (Vector3.forward * 75f);
-			//treeDestory ();
+			rb.AddRelativeForce ((playerPOS - this.gameObject.transform.position) * 50f);
+			StartCoroutine(Example());
+
 		}
 
-	}
-
-	void treeDestory(){
-		Destroy (this.gameObject);
 	}
 
 	void hit(){
@@ -41,8 +42,13 @@ public class Tree : MonoBehaviour {
 
 	void Damage(float damage){
 		Health -= damage;
-		loot.addInv(itemObject.logItem.name, 10);
+		loot.addInv(itemObject.logItem.name, Random.Range(1, 3));
 
+	}
+
+	IEnumerator Example() {
+		yield return new WaitForSeconds(9);
+		Destroy (this.gameObject);
 	}
 		
 }

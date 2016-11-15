@@ -12,7 +12,7 @@ public class Looting : MonoBehaviour {
 		//Debug.Log(itemName);
 		Debug.Log ("item: " + nam + " | amount: " + amount);
 		inventoryGUI.inventoryNameDictionary [0] = nam;
-		inventoryGUI.dictionaryAmounts [0] += 1;
+		inventoryGUI.dictionaryAmounts [0] += amount;
 
 			
 	}
