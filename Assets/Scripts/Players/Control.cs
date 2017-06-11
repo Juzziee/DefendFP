@@ -9,17 +9,16 @@ public class Control : MonoBehaviour {
 	bool canSwing; 
 
 
-	void SetCursorState() {
-		Cursor.lockState = cursorMode;
-	}
-
-
 	// Use this for initialization
 	void Start () {
 		cursorMode = CursorLockMode.Locked;
 		Cursor.visible = false;
 		isSwing = false;
 		canSwing = true;
+	}
+
+	void SetCursorState() {
+		Cursor.lockState = cursorMode;
 	}
 
 	// Update is called once per frame
